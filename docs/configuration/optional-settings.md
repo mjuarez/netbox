@@ -85,7 +85,7 @@ If True, cross-origin resource sharing (CORS) requests will be accepted from all
 ## CORS_ORIGIN_REGEX_WHITELIST
 
 These settings specify a list of origins that are authorized to make cross-site API requests. Use
-`CORS_ORIGIN_WHITELIST` to define a list of exact hostnames, or `CORS_ORIGIN_REGEX_WHITELIST` to define a set of regular 
+`CORS_ORIGIN_WHITELIST` to define a list of exact hostnames, or `CORS_ORIGIN_REGEX_WHITELIST` to define a set of regular
 expressions. (These settings have no effect if `CORS_ORIGIN_ALLOW_ALL` is True.) For example:
 
 ```python
@@ -460,7 +460,7 @@ NetBox can be configured to support remote user authentication by inferring user
 
 Default: `'HTTP_REMOTE_USER'`
 
-When remote user authentication is in use, this is the name of the HTTP header which informs NetBox of the currently authenticated user. (Requires `REMOTE_AUTH_ENABLED`.)
+When remote user authentication is in use, this is the name of the HTTP request header which informs NetBox of the currently authenticated user. Desired request header should be prefixed with `HTTP_`. For example, to use the request header `X-Remote-User` set this to `HTTP_X_REMOTE_USER`. (Requires `REMOTE_AUTH_ENABLED`.)
 
 ---
 
